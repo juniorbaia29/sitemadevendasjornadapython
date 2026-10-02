@@ -20,12 +20,15 @@
 import streamlit as st
 import pandas as pd 
 import plotly.express as px
+#hospedar no github -> github.com/usuario/repositorio
+
 
 #carregar a base de dados
 tabela_vendas=pd.read_csv('vendas.csv')
-
 st.write('# Sistema de Vendas')
-
+#st.navigate() -> cria uma barra de navegação no sistema,
+    # onde podemos colocar as seções do sistema 
+    
 #Seção de cadatro de vendas
 #O comando 'st.sidebar' cria uma barra lateral no sistema,
             #  onde podemos colocar os campos de cadastro
@@ -37,7 +40,7 @@ data=st.sidebar.date_input('Data da Venda',min_value=pd.to_datetime
     #  define a data mínima que pode ser selecionada no campo de data, 
     # que nesse caso é a data atual.
 #vendedor=st.text_input('Vendedor') 
-vendedor=st.sidebar.selectbox('Vendedor', ['João', 'Maria', 'Pedro', 'Ana'])     
+vendedor=st.sidebar.selectbox('Vendedor', ['Claudio', 'Junior', 'Patricia', 'Paty'])     
 #produto=st.text_input('Produto')
 produto=st.sidebar.selectbox('Produto', ['Produto A', 
                     'Produto B', 'Produto C', 'Produto D'])
